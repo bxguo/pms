@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.1.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.zysl.cloud</groupId>
+    <artifactId>pms</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <!--<packaging>pom</packaging>-->
+
+    <properties>
+        <pms.version>1.0.0-SNAPSHOT</pms.version>
+        <java.version>1.8</java.version>
+
+        <!-- TODO 依赖项目待处理
+        <cloud-share.version>1.0.0-SNAPSHOT</cloud-share.version>
+        <cloud-api.version>1.0.0-SNAPSHOT</cloud-api.version>-->
+    </properties>
+    <modules>
+        <module>pms-api</module>
+        <module>pms-job</module>
+        <module>pms-mq-consumer</module>
+        <module>pms-mq-producer</module>
+        <module>pms-reference</module>
+        <module>pms-rule</module>
+        <module>pms-service</module>
+        <module>pms-web</module>
+        <module>pms-biz</module>
+        <module>pms-domain</module>
+        <module>pms-dal</module>
+        <module>pms-utils</module>
+        <module>pms-config</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
