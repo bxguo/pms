@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 
-@ComponentScan({"com.zysl.cloud"})
+@ComponentScan({"com.zysl.cloud.pms"})
 @SpringBootApplication
 public class WebApplication {
 
