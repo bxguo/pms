@@ -23,15 +23,20 @@
             <artifactId>pms-dal</artifactId>
             <version>${pms.version}</version>
         </dependency>
-        <dependency>
+ <!--       <dependency>
             <groupId>com.zysl.cloud</groupId>
             <artifactId>pms-biz</artifactId>
             <version>${pms.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava-parent</artifactId>
             <version>27.0.1-jre</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zysl.cloud</groupId>
+            <artifactId>pms-utils</artifactId>
+            <version>${pms.version}</version>
         </dependency>
 
     </dependencies>

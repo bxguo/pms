@@ -19,9 +19,9 @@ import javax.xml.ws.Service;
  * @author: bxguo
  * @time: 2019/3/29 14:00
  */
-//@RestController
-public class CityServiceImpl extends BaseApiController implements CityService {
-    //@Autowired
+@RestController
+public class CityController extends BaseApiController implements CityService {
+    @Autowired
     private ICityService cityService;
     @Override
     public BasePaginationResponse<CityDTO> queryCityInfoByName(CityRequest request) {

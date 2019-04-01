@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.util.CollectionUtils;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -42,7 +43,7 @@ public class ServiceProvider {
         String methodName = stack[3].getMethodName();
         logger.info(String.format(START_FORMAT_STRING, clsName, methodName, req));
         BaseResponse<D> resp = new BaseResponse<>();
-        List<String> validate = Lists.newArrayList();
+        List<String> validate = new ArrayList<>();
         if (reqVCls !=  null) {
             S validator = BeanCopyUtil.copy(req, reqVCls);
             BeanValidator beanValidator = SpringContextUtil.getBean("beanValidator", BeanValidator.class);

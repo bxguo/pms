@@ -44,7 +44,7 @@ public class BeanValidator implements Serializable {
             errors = extractPropertyAndMessageAsList(e, ": ");
         }
         if (errors == null) {
-            errors = Lists.newArrayList();
+            errors = new ArrayList<>();
         }
         data.customizedValidate(errors, useCase);
         return errors;
@@ -57,7 +57,7 @@ public class BeanValidator implements Serializable {
     }
 
     private static List<String> extractPropertyAndMessageAsList(ConstraintViolationException e, String separator) {
-        ArrayList<String> errors = Lists.newArrayList();
+        ArrayList<String> errors = new ArrayList<>();
         for (ConstraintViolation<?> violation : e.getConstraintViolations()) {
             errors.add(violation.getPropertyPath() + separator + violation.getMessage());
         }

@@ -5,7 +5,7 @@ import com.zysl.cloud.pms.domain.pg.pms.bo.CityBO;
 import com.zysl.cloud.pms.domain.pg.pms.pms.City;
 import com.zysl.cloud.pms.domain.pg.pms.query.CityQuery;
 import com.zysl.cloud.pms.service.ICityService;
-import com.zysl.cloud.pms.share.BeanCopyUtil;
+import com.zysl.cloud.pms.utils.BeanCopyUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ import java.util.List;
  * @author: bxguo
  * @time: 2019/3/29 15:53
  */
-//@Service
+@Service
 public class CityServiceImpl implements ICityService {
 
     //@Autowired

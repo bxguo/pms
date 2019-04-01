@@ -13,7 +13,7 @@ import java.util.Date;
  * @author: bxguo
  * @time: 2019/3/28 16:27
  */
-//@RestController
+@RestController
 public class HelloServiceImpl extends  BaseApiController implements HelloService {
 
     @Override
