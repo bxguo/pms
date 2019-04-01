@@ -1,11 +1,8 @@
 package com.zysl.cloud.pms.api.service;
 
-import com.zysl.cloud.pms.api.dto.Common.BaseResponse;
+import com.zysl.cloud.pms.api.dto.common.BaseResponse;
 import com.zysl.cloud.pms.api.dto.HelloRequest;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 健康服务
@@ -13,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @time: 2019/3/19 16:31
  */
 @RequestMapping(value = "api/helloSvc")
-public interface IHelloService {
+public interface HelloService {
     /**
      * 检查是否还活着
      * @return
@@ -26,7 +23,7 @@ public interface IHelloService {
      * @param request
      * @return
      */
-    @GetMapping("/hello")
+    @PostMapping("/hello")
     BaseResponse<String> hello(@RequestBody HelloRequest request);
 
 

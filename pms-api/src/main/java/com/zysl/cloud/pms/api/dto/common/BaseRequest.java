@@ -1,4 +1,4 @@
-package com.zysl.cloud.pms.api.dto.Common;
+package com.zysl.cloud.pms.api.dto.common;
 
 import io.swagger.annotations.ApiModel;
 import lombok.Getter;

@@ -25,9 +25,25 @@
         </dependency>
         <dependency>
             <groupId>com.zysl.cloud</groupId>
+            <artifactId>pms-domain</artifactId>
+            <version>${pms.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zysl.cloud</groupId>
+            <artifactId>pms-service</artifactId>
+            <version>${pms.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zysl.cloud</groupId>
             <artifactId>pms-api</artifactId>
             <version>${pms.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.zysl.cloud</groupId>
+            <artifactId>pms-dal</artifactId>
+            <version>${pms.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -36,6 +52,30 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper</artifactId>
+            <version>4.1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
         </dependency>
     </dependencies>
     <build>

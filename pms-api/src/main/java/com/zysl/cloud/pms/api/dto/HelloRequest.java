@@ -1,6 +1,6 @@
 package com.zysl.cloud.pms.api.dto;
 
-import com.zysl.cloud.pms.api.dto.Common.BaseRequest;
+import com.zysl.cloud.pms.api.dto.common.BaseRequest;
 import lombok.Getter;
 import lombok.Setter;
 

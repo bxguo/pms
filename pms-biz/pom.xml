@@ -18,6 +18,16 @@
             <artifactId>pms-api</artifactId>
             <version>${pms.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.zysl.cloud</groupId>
+            <artifactId>pms-service</artifactId>
+            <version>${pms.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zysl.cloud</groupId>
+            <artifactId>pms-domain</artifactId>
+            <version>${pms.version}</version>
+        </dependency>
     </dependencies>
 
     <build>

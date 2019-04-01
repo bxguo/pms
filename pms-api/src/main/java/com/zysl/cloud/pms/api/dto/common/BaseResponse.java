@@ -1,9 +1,8 @@
-package com.zysl.cloud.pms.api.dto.Common;
+package com.zysl.cloud.pms.api.dto.common;
 
 
 import com.zysl.cloud.pms.api.enumerate.RespCodeEnum;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 

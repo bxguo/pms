@@ -1,8 +1,8 @@
 package com.zysl.cloud.pms.share.provider;
 
 import com.google.common.collect.Lists;
-import com.zysl.cloud.pms.api.dto.Common.BaseResponse;
-import com.zysl.cloud.pms.api.dto.Common.exception.AppLogicException;
+import com.zysl.cloud.pms.api.dto.common.BaseResponse;
+import com.zysl.cloud.pms.api.dto.common.exception.AppLogicException;
 import com.zysl.cloud.pms.api.enumerate.RespCodeEnum;
 import com.zysl.cloud.pms.share.BeanCopyUtil;
 import com.zysl.cloud.pms.share.SpringContextUtil;
@@ -48,7 +48,7 @@ public class ServiceProvider {
             BeanValidator beanValidator = SpringContextUtil.getBean("beanValidator", BeanValidator.class);
             validate = beanValidator.validate(validator, useCase);
         }
-        if (!CollectionUtils.isEmpty(validate)) {
+        if (CollectionUtils.isEmpty(validate)) {
             try {
                 resp.setModel(BeanCopyUtil.copy(predit.solve(req), respCls));
                 resp.setSuccess(true);

@@ -12,6 +12,61 @@
     <version>${pms.version}</version>
 
     <dependencies>
+        <dependency>
+            <groupId>com.zysl.cloud</groupId>
+            <artifactId>pms-domain</artifactId>
+            <version>${pms.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zysl.cloud</groupId>
+            <artifactId>pms-config</artifactId>
+            <version>${pms.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.zysl.cloud</groupId>
+            <artifactId>pms-utils</artifactId>
+            <version>${pms.version}</version>
+        </dependency>
+
+        <!--持久化-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper</artifactId>
+            <version>4.1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>5.1.8</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!--逆向生成工程-->
+        <dependency>
+            <groupId>org.mybatis.generator</groupId>
+            <artifactId>mybatis-generator-core</artifactId>
+            <version>1.3.5</version>
+        </dependency>
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-generator</artifactId>
+            <version>1.1.5</version>
+        </dependency>
+
+
 
     </dependencies>
 
