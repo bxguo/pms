@@ -1,17 +1,17 @@
-package com.zysl.cloud.pms.share.provider;
+package com.zysl.common.service.provider;
 
-import com.google.common.collect.Lists;
-import com.zysl.cloud.pms.api.dto.common.BaseResponse;
-import com.zysl.cloud.pms.api.dto.common.exception.AppLogicException;
-import com.zysl.cloud.pms.api.enumerate.RespCodeEnum;
-import com.zysl.cloud.pms.share.BeanCopyUtil;
-import com.zysl.cloud.pms.share.SpringContextUtil;
-import com.zysl.cloud.pms.share.validator.BeanValidator;
-import com.zysl.cloud.pms.share.validator.IValidator;
+
+import com.zysl.common.utils.BeanCopyUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.CollectionUtils;
 
+import com.zysl.common.constants.BaseResponse;
+import com.zysl.common.constants.exception.AppLogicException;
+import com.zysl.common.enums.RespCodeEnum;
+import com.zysl.common.utils.SpringContextUtil;
+import com.zysl.common.validator.BeanValidator;
+import com.zysl.common.validator.IValidator;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,8 +30,8 @@ public class ServiceProvider {
 
     private ServiceProvider() { }
 
-    public static <R, S extends IValidator, P, D extends Serializable>BaseResponse<D> call(P req,
-            Class<S> reqVCls, Class<D> respCls, ServiceOperateCallPredit<P, R> predit){
+    public static <R, S extends IValidator, P, D extends Serializable> BaseResponse<D> call(P req,
+                                                                                            Class<S> reqVCls, Class<D> respCls, ServiceOperateCallPredit<P, R> predit){
         return call(req, reqVCls, respCls, predit, BeanValidator.CASE_DEFAULT);
     }
 

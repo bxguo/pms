@@ -1,4 +1,4 @@
-package com.zysl.cloud.pms.share.validator;
+package com.zysl.common.validator;
 
 import java.util.List;
 

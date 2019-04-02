@@ -1,6 +1,5 @@
-package com.zysl.cloud.pms.share.validator;
+package com.zysl.common.validator;
 
-import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;

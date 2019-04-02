@@ -1,6 +1,6 @@
 package com.zysl.cloud.pms.api.dto.validation;
 
-import com.zysl.cloud.pms.share.validator.IValidator;
+import com.zysl.common.validator.IValidator;
 import lombok.Getter;
 import lombok.Setter;
 

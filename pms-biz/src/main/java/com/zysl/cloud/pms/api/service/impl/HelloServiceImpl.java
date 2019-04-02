@@ -1,10 +1,10 @@
 package com.zysl.cloud.pms.api.service.impl;
 
-import com.zysl.cloud.pms.api.dto.common.BaseResponse;
 import com.zysl.cloud.pms.api.dto.HelloRequest;
 import com.zysl.cloud.pms.api.dto.validation.HelloRequestV;
 import com.zysl.cloud.pms.api.service.HelloService;
-import com.zysl.cloud.pms.share.provider.ServiceProvider;
+import com.zysl.common.constants.BaseResponse;
+import com.zysl.common.service.provider.ServiceProvider;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;

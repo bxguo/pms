@@ -28,6 +28,12 @@
             <artifactId>pms-domain</artifactId>
             <version>${pms.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.zysl.cloud</groupId>
+            <artifactId>pms-utils</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>

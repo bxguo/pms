@@ -1,19 +1,18 @@
 package com.zysl.cloud.pms.api.service.impl;
 
-import com.zysl.cloud.pms.api.dto.common.BasePaginationResponse;
-import com.zysl.cloud.pms.api.dto.common.BaseResponse;
 import com.zysl.cloud.pms.api.dto.req.CityRequest;
 import com.zysl.cloud.pms.api.dto.resp.CityDTO;
 import com.zysl.cloud.pms.api.dto.validation.CityRequestV;
 import com.zysl.cloud.pms.api.service.CityService;
 import com.zysl.cloud.pms.domain.pg.pms.query.CityQuery;
 import com.zysl.cloud.pms.service.ICityService;
-import com.zysl.cloud.pms.share.BeanCopyUtil;
-import com.zysl.cloud.pms.share.provider.ServiceProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.xml.ws.Service;
+import com.zysl.common.constants.BasePaginationResponse;
+import com.zysl.common.constants.BaseResponse;
+import com.zysl.common.service.provider.ServiceProvider;
+import com.zysl.common.utils.BeanCopyUtil;
 
 /**
  * @author: bxguo

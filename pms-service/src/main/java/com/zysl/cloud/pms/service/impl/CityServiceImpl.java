@@ -5,7 +5,7 @@ import com.zysl.cloud.pms.domain.pg.pms.bo.CityBO;
 import com.zysl.cloud.pms.domain.pg.pms.pms.City;
 import com.zysl.cloud.pms.domain.pg.pms.query.CityQuery;
 import com.zysl.cloud.pms.service.ICityService;
-import com.zysl.cloud.pms.utils.BeanCopyUtil;
+import com.zysl.common.utils.BeanCopyUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.zysl.cloud.pms.share.provider;
+package com.zysl.common.service.provider;
 
 /**
  * @author: bxguo

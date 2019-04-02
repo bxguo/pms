@@ -1,6 +1,7 @@
-package com.zysl.cloud.pms.api.dto.common.exception;
+package com.zysl.common.constants.exception;
 
-import com.zysl.cloud.pms.api.enumerate.RespCodeEnum;
+
+import com.zysl.common.enums.RespCodeEnum;
 import lombok.Getter;
 
 /**

@@ -1,15 +1,14 @@
 package com.zysl.cloud.pms.api.service;
 
-import com.zysl.cloud.pms.api.dto.common.BasePaginationResponse;
-import com.zysl.cloud.pms.api.dto.common.BaseResponse;
+
 import com.zysl.cloud.pms.api.dto.req.CityRequest;
 import com.zysl.cloud.pms.api.dto.resp.CityDTO;
+import com.zysl.common.constants.BasePaginationResponse;
+import com.zysl.common.constants.BaseResponse;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import java.util.List;
 
 /**
  * @author: bxguo

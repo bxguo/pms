@@ -1,4 +1,4 @@
-package com.zysl.cloud.pms.share;
+package com.zysl.common.utils;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
