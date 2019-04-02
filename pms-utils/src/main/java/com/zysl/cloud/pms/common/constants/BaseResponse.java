@@ -1,7 +1,7 @@
-package com.zysl.common.constants;
+package com.zysl.cloud.pms.common.constants;
 
 
-import com.zysl.common.enums.RespCodeEnum;
+import com.zysl.cloud.pms.common.enums.RespCodeEnum;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;

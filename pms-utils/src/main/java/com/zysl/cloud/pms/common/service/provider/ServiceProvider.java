@@ -1,17 +1,17 @@
-package com.zysl.common.service.provider;
+package com.zysl.cloud.pms.common.service.provider;
 
 
-import com.zysl.common.utils.BeanCopyUtil;
+import com.zysl.cloud.pms.common.utils.BeanCopyUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.CollectionUtils;
 
-import com.zysl.common.constants.BaseResponse;
-import com.zysl.common.constants.exception.AppLogicException;
-import com.zysl.common.enums.RespCodeEnum;
-import com.zysl.common.utils.SpringContextUtil;
-import com.zysl.common.validator.BeanValidator;
-import com.zysl.common.validator.IValidator;
+import com.zysl.cloud.pms.common.constants.BaseResponse;
+import com.zysl.cloud.pms.common.constants.exception.AppLogicException;
+import com.zysl.cloud.pms.common.enums.RespCodeEnum;
+import com.zysl.cloud.pms.common.utils.SpringContextUtil;
+import com.zysl.cloud.pms.common.validator.BeanValidator;
+import com.zysl.cloud.pms.common.validator.IValidator;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;

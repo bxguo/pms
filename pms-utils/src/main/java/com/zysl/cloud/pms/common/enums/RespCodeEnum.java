@@ -1,4 +1,4 @@
-package com.zysl.common.enums;
+package com.zysl.cloud.pms.common.enums;
 
 import lombok.Getter;
 

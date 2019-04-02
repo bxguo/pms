@@ -1,7 +1,7 @@
 package com.zysl.cloud.pms.api.service;
 
 import com.zysl.cloud.pms.api.dto.HelloRequest;
-import com.zysl.common.constants.BaseResponse;
+import com.zysl.cloud.pms.common.constants.BaseResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

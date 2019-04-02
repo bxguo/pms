@@ -9,10 +9,10 @@ import com.zysl.cloud.pms.service.ICityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.zysl.common.constants.BasePaginationResponse;
-import com.zysl.common.constants.BaseResponse;
-import com.zysl.common.service.provider.ServiceProvider;
-import com.zysl.common.utils.BeanCopyUtil;
+import com.zysl.cloud.pms.common.constants.BasePaginationResponse;
+import com.zysl.cloud.pms.common.constants.BaseResponse;
+import com.zysl.cloud.pms.common.service.provider.ServiceProvider;
+import com.zysl.cloud.pms.common.utils.BeanCopyUtil;
 
 /**
  * @author: bxguo

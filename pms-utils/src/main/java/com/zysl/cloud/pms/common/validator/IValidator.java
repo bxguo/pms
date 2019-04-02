@@ -1,4 +1,4 @@
-package com.zysl.common.validator;
+package com.zysl.cloud.pms.common.validator;
 
 import java.util.List;
 

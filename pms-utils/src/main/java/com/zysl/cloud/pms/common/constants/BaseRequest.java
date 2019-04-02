@@ -1,4 +1,4 @@
-package com.zysl.common.constants;
+package com.zysl.cloud.pms.common.constants;
 
 import io.swagger.annotations.ApiModel;
 import lombok.Getter;

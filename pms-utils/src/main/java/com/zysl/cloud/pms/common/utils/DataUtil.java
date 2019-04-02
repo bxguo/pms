@@ -1,4 +1,4 @@
-package com.zysl.common.utils;
+package com.zysl.cloud.pms.common.utils;
 
 import lombok.extern.slf4j.Slf4j;
 

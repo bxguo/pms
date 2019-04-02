@@ -1,4 +1,4 @@
-package com.zysl.common.validator;
+package com.zysl.cloud.pms.common.validator;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
