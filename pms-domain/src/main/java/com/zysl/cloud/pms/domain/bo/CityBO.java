@@ -1,5 +1,7 @@
-package com.zysl.cloud.pms.domain.pg.pms.pms;
+package com.zysl.cloud.pms.domain.bo;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,7 +13,7 @@ import java.io.Serializable;
  */
 @Getter
 @Setter
-public class City implements Serializable {
+public class CityBO implements Serializable {
     private static final long serialVersionUID = 4511103456997774356L;
     private Long id;
     private Long provinceId;

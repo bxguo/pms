@@ -12,26 +12,10 @@
     <version>${pms.version}</version>
 
     <dependencies>
-
-        <dependency>
-            <groupId>com.zysl.cloud</groupId>
-            <artifactId>pms-domain</artifactId>
-            <version>${pms.version}</version>
-        </dependency>
         <dependency>
             <groupId>com.zysl.cloud</groupId>
             <artifactId>pms-dal</artifactId>
             <version>${pms.version}</version>
-        </dependency>
- <!--       <dependency>
-            <groupId>com.zysl.cloud</groupId>
-            <artifactId>pms-biz</artifactId>
-            <version>${pms.version}</version>
-        </dependency>-->
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava-parent</artifactId>
-            <version>27.0.1-jre</version>
         </dependency>
         <dependency>
             <groupId>com.zysl.cloud</groupId>

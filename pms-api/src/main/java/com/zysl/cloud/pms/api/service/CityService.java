@@ -23,5 +23,5 @@ public interface CityService {
 
     @GetMapping("/queryCityInfoById")
     @ApiOperation(httpMethod = "GET", value = "城市基本信息查询")
-    BaseResponse<CityDTO> queryCityInfoById(@RequestBody CityRequest request);
+    BaseResponse<CityDTO> queryCityInfoById(CityRequest request);
 }

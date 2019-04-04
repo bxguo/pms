@@ -1,4 +1,4 @@
-package com.zysl.cloud.pms.domain.pg.pms.query;
+package com.zysl.cloud.pms.domain.query;
 
 import lombok.Getter;
 import lombok.Setter;

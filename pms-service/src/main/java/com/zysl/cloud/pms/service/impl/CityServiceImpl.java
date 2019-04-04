@@ -1,12 +1,11 @@
 package com.zysl.cloud.pms.service.impl;
 
 import com.zysl.cloud.pms.dal.dao.pms.mysql.CitySlaveMapper;
-import com.zysl.cloud.pms.domain.pg.pms.bo.CityBO;
-import com.zysl.cloud.pms.domain.pg.pms.pms.City;
-import com.zysl.cloud.pms.domain.pg.pms.query.CityQuery;
+import com.zysl.cloud.pms.domain.bo.CityBO;
+import com.zysl.cloud.pms.domain.pms.City;
+import com.zysl.cloud.pms.domain.query.CityQuery;
 import com.zysl.cloud.pms.service.ICityService;
 import com.zysl.cloud.pms.common.utils.BeanCopyUtil;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -32,6 +31,7 @@ public class CityServiceImpl implements ICityService {
         if (copy == null) {
             return null;
         }
-        return BeanCopyUtil.copy(citySlaveMapper.selectOne(copy),CityBO.class);
+        //return BeanCopyUtil.copy(citySlaveMapper.selectOne(copy),CityBO.class);
+        return new CityBO();
     }
 }

@@ -1,7 +1,7 @@
 package com.zysl.cloud.pms.service;
 
-import com.zysl.cloud.pms.domain.pg.pms.bo.CityBO;
-import com.zysl.cloud.pms.domain.pg.pms.query.CityQuery;
+import com.zysl.cloud.pms.domain.bo.CityBO;
+import com.zysl.cloud.pms.domain.query.CityQuery;
 
 import java.util.List;
 

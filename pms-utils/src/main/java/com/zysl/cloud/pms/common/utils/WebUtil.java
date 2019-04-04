@@ -55,9 +55,9 @@ public class WebUtil {
             return httpServletRequest.getRemoteAddr();
         }
         if (userIp.contains(",")){
-            return userIp.substring(0, userIp.indexOf(","));
+            //return userIp.substring(0, userIp.indexOf(","));
+            return userIp.split(",")[0].trim();
         }
         return userIp;
     }
-
 }
