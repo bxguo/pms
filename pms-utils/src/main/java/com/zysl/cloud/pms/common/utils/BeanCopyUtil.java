@@ -2,6 +2,11 @@ package com.zysl.cloud.pms.common.utils;
 
 
 import com.alibaba.fastjson.JSON;
+import org.springframework.util.CollectionUtils;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author: bxguo
@@ -20,5 +25,15 @@ public class BeanCopyUtil {
             return (T) from;
         }
         return JSON.parseObject(JSON.toJSONString(from), destCls);
+    }
+
+    public static <F,T> List<T> copyList(List<F> from, Class<T> destCls){
+        if (CollectionUtils.isEmpty(from) ) {
+            return Collections.<T>emptyList();
+        }
+        if (from.get(0).getClass().equals(destCls)) {
+            return (List<T>) from;
+        }
+        return from.stream().map(f -> copy(f, destCls)).collect(Collectors.toList());
     }
 }

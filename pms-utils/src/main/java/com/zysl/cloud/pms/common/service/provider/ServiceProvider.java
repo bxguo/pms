@@ -1,6 +1,9 @@
 package com.zysl.cloud.pms.common.service.provider;
 
 
+import com.zysl.cloud.pms.common.constants.BasePaginationRequest;
+import com.zysl.cloud.pms.common.constants.BasePaginationResponse;
+import com.zysl.cloud.pms.common.constants.MyPage;
 import com.zysl.cloud.pms.common.utils.BeanCopyUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -71,4 +74,44 @@ public class ServiceProvider {
         logger.info(String.format(END_FORMAT_STRING, clsName, methodName, used, resp));
         return resp;
     }
+
+    public static <R, S extends IValidator, P extends BasePaginationRequest, D extends Serializable> BasePaginationResponse<D> callList(P req, Class<S> reqVCls,
+                   Class<D> respCls, ServiceListCallPredit<P, R> predit, Integer useCase){
+        Long start = System.currentTimeMillis();
+        StackTraceElement[] stack = Thread.currentThread().getStackTrace();
+        String clsName = stack[2].getClassName();
+        String methodName = stack[2].getMethodName();
+        logger.info(String.format(START_FORMAT_STRING, clsName, methodName, req));
+        BasePaginationResponse<D> resp = new BasePaginationResponse<>();
+        List<String> validate = new ArrayList<>();
+        if (reqVCls !=  null) {
+            S validator = BeanCopyUtil.copy(req, reqVCls);
+            BeanValidator beanValidator = SpringContextUtil.getBean("beanValidator", BeanValidator.class);
+            validate = beanValidator.validate(validator, useCase);
+        }
+        if (CollectionUtils.isEmpty(validate)) {
+            try {
+                MyPage page = new MyPage(req.getPageIndex(), req.getPageSize());
+                resp.setModelList(BeanCopyUtil.copyList(predit.solve(req, page), respCls));
+                resp.setSuccess(true);
+            } catch (AppLogicException e) {
+                logger.warn(String.format(ERROR_FORMAT_STRING, clsName, methodName, req, e.getMessage()));
+                resp.setCode(e.getExceptionCode());
+                resp.setMsg(e.getMessage());
+            } catch (Exception e) {
+                logger.error(String.format(EXCEPTION_FORMAT_STRING, clsName, methodName, req, e.getMessage()),e);
+                resp.setCode(RespCodeEnum.FAILED.getCode());
+                resp.setMsg(RespCodeEnum.FAILED.getDesc());
+            }
+        }else {
+            resp.setCode(RespCodeEnum.ILLEGAL_PARAMETER.getCode());
+            resp.setMsg(RespCodeEnum.ILLEGAL_PARAMETER.getDesc());
+            resp.setValidations(validate);
+        }
+        Long used = System.currentTimeMillis() - start;
+        logger.info(String.format(END_FORMAT_STRING, clsName, methodName, used, resp));
+        return resp;
+    }
+
+
 }

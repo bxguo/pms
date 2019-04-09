@@ -1,5 +1,6 @@
 package com.zysl.cloud.pms.common.constants;
 
+import com.zysl.cloud.pms.common.enums.RespCodeEnum;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
@@ -32,4 +33,10 @@ public class BasePaginationResponse<T extends Serializable> implements Serializa
     @ApiModelProperty(value = "当前页码", position = 6)
     private Integer pageCount;
 
+    public void setSuccess(Boolean success){
+        this.setCode(success? RespCodeEnum.SUCCESS.getCode():RespCodeEnum.FAILED.getCode());
+    }
+    public Boolean success(Boolean success){
+        return RespCodeEnum.SUCCESS.getCode().equals(this.code);
+    }
 }
