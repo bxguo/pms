@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import tk.mybatis.spring.annotation.MapperScan;
 
@@ -18,43 +19,52 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 @Configuration
-@MapperScan(value = "tk.mybatis.mapper.annotation", properties = {
-        "mappers=tk.mybatis.mapper.common.Mapper",
-        "notEmpty=true","identity=MYSQL"},
-        basePackages = DemoDataSourceConfig.PACKAGE,
-sqlSessionFactoryRef = DemoDataSourceConfig.SESSION_FACTORY)
+@MapperScan(value = "tk.mybatis.mapper.annotation"
+        , properties = {"mappers=tk.mybatis.mapper.common.Mapper", "notEmpty=true","identity=MYSQL"}
+        , basePackages = DemoDataSourceConfig.PACKAGE
+        , sqlSessionFactoryRef = DemoDataSourceConfig.SESSION_FACTORY)
 @EnableTransactionManagement
 public class DemoDataSourceConfig {
 
     static final String PACKAGE = "com.zysl.cloud.pms.dal.dao.pms.mysql";
-    static final String MAPPER_LOCATION = "classpath:mapping/pms/mysql/slave/*.xml";
-    static final String DATA_SOURCE = "demoDataSource";
+    private static final String MAPPER_LOCATION = "classpath:mapping/pms/mysql/slave/*.xml";
+
+    private static final String DATA_SOURCE = "demoDataSource";
 //    static final String PACKAGE = "com.zysl.demo.dal.dao.demodb";
     static final String SESSION_FACTORY = "demoMySQLSessionFactory";
 
-    @Value("${spring.datasource.url}")
+ /*   @Value("127.0.0.1:3306/test")
     private String url;
-    @Value("${spring.datasource.username}")
+    @Value("")
     private String user;
-    @Value("${spring.datasource.password}")
+    @Value("")
     private String password;
-    @Value("${spring.datasource.driver-class-name}")
-    private String driverlass;
+    @Value("com.mysql.cj.jdbc.Driver")
+    private String driverlass;*/
 
 
     @Bean(name=DemoDataSourceConfig.DATA_SOURCE)
     public DataSource demoDataSource(){
         DruidDataSource dataSource = new DruidDataSource();
-        dataSource.setDriverClassName(driverlass);
-        dataSource.setUrl(url);
-        dataSource.setUsername(user);
-        dataSource.setPassword(password);
+        dataSource.setDriverClassName("com.mysql.jdbc.Driver ");
+        //dataSource.setUrl("127.0.0.1:3306/test");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC");
+        dataSource.setUsername("root");
+        dataSource.setPassword("123");
+        //dataSource.setDbType("mysql");
         try {
             dataSource.setFilters("stat,wall");
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return dataSource;
+    }
+
+    @Bean(name = "dataSourceTransactionManager")
+    public DataSourceTransactionManager dataSourceTransactionManager(DataSource dataSource){
+        DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager();
+        dataSourceTransactionManager.setDataSource(dataSource);
+        return dataSourceTransactionManager;
     }
 
 

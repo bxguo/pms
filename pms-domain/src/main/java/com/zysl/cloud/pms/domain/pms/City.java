@@ -3,6 +3,7 @@ package com.zysl.cloud.pms.domain.pms;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
@@ -13,6 +14,7 @@ import java.io.Serializable;
 @Setter
 public class City implements Serializable {
     private static final long serialVersionUID = 4511103456997774356L;
+    @Id
     private Long id;
     private Long provinceId;
     private String cityName;

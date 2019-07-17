@@ -10,12 +10,14 @@ import lombok.Setter;
 @Getter
 @Setter
 public class CityQuery{
+    private Long id;
     private String cityName;
 
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("CityQuery{");
-        sb.append("cityName='").append(cityName).append('\'');
+        sb.append("id=").append(id);
+        sb.append(", cityName='").append(cityName).append('\'');
         sb.append('}');
         return sb.toString();
     }

@@ -6,6 +6,7 @@ import com.zysl.cloud.pms.domain.pms.City;
 import com.zysl.cloud.pms.domain.query.CityQuery;
 import com.zysl.cloud.pms.service.ICityService;
 import com.zysl.cloud.pms.common.utils.BeanCopyUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.List;
 @Service
 public class CityServiceImpl implements ICityService {
 
-    //@Autowired
+    @Autowired
     private CitySlaveMapper citySlaveMapper;
 
     @Override
@@ -31,7 +32,8 @@ public class CityServiceImpl implements ICityService {
         if (copy == null) {
             return null;
         }
-        //return BeanCopyUtil.copy(citySlaveMapper.selectOne(copy),CityBO.class);
-        return new CityBO();
+        City from = citySlaveMapper.selectOne(copy);
+        return BeanCopyUtil.copy(from,CityBO.class);
+        //return new CityBO();
     }
 }
